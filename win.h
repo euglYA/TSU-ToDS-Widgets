@@ -9,6 +9,7 @@
 #include <QTextCodec>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 
 class Win : public QWidget
@@ -19,26 +20,24 @@ public:
 
 protected:
     QTextCodec *codec;
-    QFrame *frame; // рамка
-    QLabel *inputLabel; // метка ввода
-    QLineEdit *inputEdit; // строчный редактор ввода
-    QLabel *outputLabel; // метка вывода
-    QLineEdit *outputEdit; // строчный редактор вывода
-    QPushButton *nextButton; // кнопка Следующее
-    QPushButton *exitButton; // кнопка Выход
+    QFrame *frame;
+    QLabel *inputLabel;
+    QLineEdit *inputEdit;
+    QLabel *outputLabel;
+    QLineEdit *outputEdit;
+    QPushButton *nextButton;
+    QPushButton *exitButton;
 
 public slots:
-    void begin(); // метод начальной настройки интерфейса
-    void calc(); // метод реализации вычислений
+    void begin();
+    void calc();
 };
 
-class StrValidator : public QValidator // класс компонента проверки ввода
-{
+class StrValidator : public QValidator {
 public:
-    StrValidator(QObject *parent) : QValidator(parent){}
-    virtual State validate(QString &str,int &pos)const
-    {
-        return Acceptable; // метод всегда принимает вводимую строку
+    StrValidator(QObject *parent) : QValidator(parent) { }
+    virtual State validate(QString &str,int &pos)const {
+        return Acceptable;
     }
 };
 
