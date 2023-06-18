@@ -1,47 +1,17 @@
-
-#ifndef WIN_H
-#define WIN_H
-
+#ifndef window_h
+#define window_h
 #include <QtGui>
-#include <QWidget>
-#include <QFrame>
-#include <QLabel>
+#include "area.h"
 #include <QTextCodec>
-#include <QLineEdit>
 #include <QPushButton>
-#include <QVBoxLayout>
 
-
-class Win : public QWidget
+class Window : public QWidget
 {
-    Q_OBJECT
-public:
-    Win(QWidget *parent = 0); // конструктор
-
 protected:
     QTextCodec *codec;
-    QFrame *frame;
-    QLabel *inputLabel;
-    QLineEdit *inputEdit;
-    QLabel *outputLabel;
-    QLineEdit *outputEdit;
-    QPushButton *nextButton;
-    QPushButton *exitButton;
-
-public slots:
-    void begin();
-    void calc();
-};
-
-class StrValidator : public QValidator {
+    Area * area; // область отображения рисунка
+    QPushButton * btn;
 public:
-    StrValidator(QObject *parent) : QValidator(parent) { }
-    virtual State validate(QString &str,int &pos)const {
-        return Acceptable;
-    }
+    Window();
 };
-
-#endif // WIN_H
-
-
-
+#endif
