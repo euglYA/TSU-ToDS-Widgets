@@ -1,5 +1,4 @@
-
-#include <QCoreApplication>
+#include <QApplication>
 
 #include "win.h"
 int main(int argc, char *argv[]) {
