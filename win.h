@@ -4,6 +4,7 @@
 #include "area.h"
 #include <QTextCodec>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 class Window : public QWidget
 {

@@ -1,4 +1,5 @@
-#include "window.h"
+#include "win.h"
+#include <QVBoxLayout>
 #include <QApplication>
 
 int main(int argc, char *argv[])

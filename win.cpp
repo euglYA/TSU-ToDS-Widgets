@@ -1,7 +1,7 @@
-#include "window.h"
+#include "win.h"
 Window::Window()
 {
- codec = QTextCodec::codecForName("Windows-1251");
+ codec = QTextCodec::codecForName("UTF-8");
  this->setWindowTitle(codec->toUnicode("Обработка событий"));
  area = new Area( this );
  btn = new QPushButton(codec->toUnicode("Завершить"),this );

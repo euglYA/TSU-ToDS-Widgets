@@ -11,8 +11,8 @@ CONFIG += c++17 cmdline \
 SOURCES += \
         area.cpp \
         figura.cpp \
-        main.cpp \
-        win.cpp
+        win.cpp \
+        main.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

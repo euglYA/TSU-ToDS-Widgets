@@ -1,3 +1,5 @@
+#ifndef area_h
+#define area_h
 #include "figura.h"
 #include <QWidget>
 
